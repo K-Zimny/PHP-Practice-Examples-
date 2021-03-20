@@ -12,13 +12,12 @@
 
 
     <?php
+        function cubeNum ($num){
+            return $num*$num*$num;
+        }
 
-    function sayHi($name){
-        echo ("Hi $name");
-    }
-    sayHi("Jim");
+        echo cubeNum(78);
     ?>
-
 </body>
 
 </html>
