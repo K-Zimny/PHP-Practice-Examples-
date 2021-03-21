@@ -9,14 +9,33 @@
 </head>
 
 <body>
-
+    <form action="site.php" method="post">
+        Number 1:<input type="number" step="0.1" name="num1"> </br>
+        Operator: <input type="text" name="op"> </br>
+        Number 2: <input type="number" name="num2"> </br>
+        <input type="submit">
+    </form>
 
     <?php
-        function cubeNum ($num){
-            return $num*$num*$num;
-        }
+        $num1 = $_POST["num1"];
+        $op = $_POST["op"];
+        $num2 = $_POST["num2"];
 
-        echo cubeNum(78);
+        if ($op == "*"){
+            echo $num1 * $num2;
+        }
+        else if ($op == "/"){
+            echo $num1 / $num2;
+        }
+        else if ($op == "+"){
+            echo $num1 + $num2;
+        }
+        else if ($op == "-"){
+            echo $num1 - $num2;
+        }
+        else {
+            echo "NaN";
+        }
     ?>
 </body>
 
